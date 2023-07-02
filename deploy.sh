@@ -8,8 +8,12 @@ sudo apt install -y ros-melodic-rqt-joint-trajectory-controller
 sudo apt install -y ros-melodic-moveit-commander
 
 # import projects
-vcs import --input https://raw.githubusercontent.com/RobotnikAutomation/rbvogui_sim/melodic-devel/repos/rbvogui_sim.repos
-
+if [[ -f stable.repos ]];
+then
+    vcs import --input stable.repos
+else
+    vcs import --input https://raw.githubusercontent.com/RobotnikAutomation/rbvogui_sim/melodic-devel/repos/rbvogui_sim.repos
+fi
 # install dependencies
 rosdep install --from-paths src --ignore-src -y
 
