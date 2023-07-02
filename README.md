@@ -1,5 +1,5 @@
 # robotnik_simulator
-The simulation of roboter for iigs
+The simulation of roboter for iigs, which is in order to make the development more easily. The simulation will provide a environment similar to physical robot, but couldn't replace the real robot.
 
 ## deployment
 
